@@ -112,12 +112,13 @@ nav > ul li:hover{
 
 hr{
     border: 1px solid rgba(128, 128, 128, 0.1);
-    margin: 0 70px;
+    margin: 0 20px;
 }
 
 /* popular styles */
 .popualar{
     margin-top: 6.25rem;
+    padding: 0 65px;
 }
 
 .cards{
@@ -196,6 +197,41 @@ hr{
     color: #FF005C;
 }
 
+/* join styles */
+.join{
+    display: flex;
+    gap: 95px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+    padding: 0 30px;
+}
+
+.join-title{
+    color: #0A0826;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.join-description{
+    color: #6C6C6C;
+    font-weight: 700;
+    line-height: 28px;
+    padding: 16px 0;
+}
+
+.join-image{
+    width: 40%;
+}
+
+.join-info{
+    width: 60%;
+}
+
+.join-btn{
+    border-radius: 0;
+}
+
 
 /* responsive styles */
 /* mobile responsive */
@@ -236,8 +272,24 @@ hr{
     }
 
     /* popular section */
+    .popualar{
+        padding: 0 20px;
+    }
+
     .cards{
         grid-template-columns: 1fr;
+    }
+
+    /* join styles */
+    .join{
+        flex-direction: column-reverse;
+        gap: 50px;
+        margin: 100px 0;
+        padding: 0 10px;
+    }
+
+    .join-image, .join-info{
+        width: 100%;
     }
 }
 
@@ -286,8 +338,24 @@ hr{
     }
     
     /* popular section */
+    .popualar{
+        padding: 0px;
+    }
+
     .cards{
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* join styles */
+    .join{
+        flex-direction: column-reverse;
+        gap: 50px;
+        margin: 100px 0;
+        padding: 0 20px;
+    }
+
+    .join-image, .join-info{
+        width: 100%;
     }
 }
 
@@ -312,5 +380,17 @@ hr{
     .cover-image img{
         display: inline-block;
         max-width: 100%;
+    }
+
+    /* popular section */
+    .popualar{
+        padding: 20px;
+    }
+    
+    /* join styles */
+    .join{
+        gap: 40px;
+        margin: 100px 0;
+        padding: 0 20px;
     }
 }
