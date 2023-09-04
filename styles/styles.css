@@ -26,6 +26,14 @@ body{
     border: none;
     outline: none;
     border-radius: 40px;
+    border: 2px solid transparent;
+}
+
+.btn:hover{
+    background-color: #FFF;
+    border: 2px solid var(--btn-bg-color);
+    color: var(--btn-bg-color);
+    cursor: pointer;
 }
 
 /* header styles */
@@ -93,7 +101,103 @@ nav > ul li:hover{
     transform: scale(.9);
 }
 
+/* sponsors styles */
+.sponsors{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-around;
+    padding: 40px 80px;
+}
 
+hr{
+    border: 1px solid rgba(128, 128, 128, 0.1);
+    margin: 0 70px;
+}
+
+/* popular styles */
+.popualar{
+    margin-top: 6.25rem;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card{
+    border-radius: 5px;
+    background: #FFF;
+    padding: 15px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+
+.card-image{
+    width: 100%;
+}
+
+.card-title{
+    color: #18191F;
+    font-size: 28px;
+    font-weight: 500;
+    padding: 15px 0 5px;
+}
+
+.price{
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.ratings{
+    padding: 5px 0;
+}
+
+.fa-star-half, .fa-star{
+    color: #FB8200;
+}
+
+.rating-numeric{
+    color: #5E6366;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+    margin-left: 10px;
+}
+
+.card-description{
+    color:#787885;
+    font-weight: 700;
+    line-height: 143%;
+    letter-spacing: 0.252px;
+}
+
+.collection-title{
+    margin-bottom: 3.125rem;
+    color: var(--text-primary);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.see-more{
+    text-align: end;
+    margin-top: 3.125rem;
+}
+
+.see-more > a{
+    color: var(--btn-bg-color);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.see-more > a:hover{
+    color: #FF005C;
+}
+
+
+/* responsive styles */
 /* mobile responsive */
 @media screen and (max-width: 576px) {
     body{
@@ -129,6 +233,11 @@ nav > ul li:hover{
 
     .cover-image img{
         max-width: 100%;
+    }
+
+    /* popular section */
+    .cards{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -174,6 +283,11 @@ nav > ul li:hover{
     .cover-image img{
         display: inline-block;
         max-width: 100%;
+    }
+    
+    /* popular section */
+    .cards{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
